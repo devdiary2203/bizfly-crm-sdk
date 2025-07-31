@@ -1,12 +1,5 @@
 import hmac
 import hashlib
-from datetime import datetime
-
-# Get the current datetime object
-current_datetime = datetime.now()
-
-# Convert the datetime object to a Unix timestamp (float representing seconds since epoch)
-time_now = str(current_datetime.timestamp())
 
 # Generate a BizFly signature using the current time, project token, and API secret
 def generate_bizfly_signature(time_now: str, project_token: str, api_secret: str) -> str:
